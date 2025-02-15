@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Commands and Information</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .command {
+            font-family: monospace;
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+	hr {
+  	height: 2px;
+  	background-color: #007bff; /* Blue color */
+  	border: none; /* Remove default border */
+  	margin: 20px 0; /* Add top and bottom margins */
+	}
+    </style>
+</head>
+<body>
+
+    <h1>Linux</h1>
+
+    <p>Linux is an open-source, Unix-like operating system. Common distributions include Ubuntu, CentOS, Debian, and Red Hat.</p>
+
+    <h2>File System</h2>
+    <p>The Linux file system follows a hierarchical structure starting from <code>/</code>.</p>
+    <ul>
+        <li><code>/etc/</code>: Contains configuration files.</li>
+        <li><code>/var/</code>: Stores variable data like logs and caches.</li>
+        <li><code>/bin/</code> and <code>/sbin/</code>: Store essential system binaries.</li>
+    </ul>
+
+    <h2>Basic Commands</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Command</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><code>ls</code></td><td>Lists directory contents.</td></tr>
+            <tr><td><code>pwd</code></td><td>Prints the current working directory.</td></tr>
+            <tr><td><code>cd</code></td><td>Changes the directory.</td></tr>
+            <tr><td><code>mkdir</code></td><td>Creates a new directory.</td></tr>
+            <tr><td><code>rm</code></td><td>Removes files and directories.</td></tr>
+            <tr><td><code>cp</code></td><td>Copies files and directories.</td></tr>
+            <tr><td><code>mv</code></td><td>Moves or renames files.</td></tr>
+            <tr><td><code>chmod</code></td><td>Changes file permissions.</td></tr>
+            <tr><td><code>chown</code></td><td>Changes file ownership.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>File Permissions</h2>
+    <p>File permissions are represented as <code>rwx</code> (Read, Write, Execute).</p>
+
+    <h2>Searching and Finding</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Command</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>grep</code></td><td>Searches text patterns in files.</td></tr>
+        <tr><td><code>find</code></td><td>Locates files based on criteria.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Archiving and Compression</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Command</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>tar</code></td><td>Used for archiving files.</td></tr>
+        <tr><td><code>zip</code> and <code>unzip</code></td><td>Manage compressed files.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Disk Usage</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Command</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>df -h</code></td><td>Shows disk usage.</td></tr>
+        <tr><td><code>du -sh</code></td><td>Shows directory size.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Process Management</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Command</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>top</code> and <code>htop</code></td><td>Monitor processes.</td></tr>
+        <tr><td><code>ps aux</code></td><td>Lists active processes.</td></tr>
+        <tr><td><code>kill</code></td><td>Terminates processes.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Networking</h2>
+        <table>
+      <thead>
+        <tr>
+          <th>Command</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>ping</code></td><td>Checks network connectivity.</td></tr>
+        <tr><td><code>wget</code> and <code>curl</code></td><td>Download files from URLs.</td></tr>
+        <tr><td><code>scp</code></td><td>Securely copies files between systems.</td></tr>
+        <tr><td><code>ssh</code></td><td>Connects securely to remote systems.</td></tr>
+      </tbody>
+    </table>
+    
+    <h2>System Administration</h2>
+        <table>
+      <thead>
+        <tr>
+          <th>Command</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>systemctl</code></td><td>Manages system services.</td></tr>
+        <tr><td><code>crontab</code></td><td>Schedules recurring tasks.</td></tr>
+        <tr><td><code>sudo</code></td><td>Runs commands as an administrator.</td></tr>
+        <tr><td><code>usermod</code>, <code>useradd</code>, <code>passwd</code></td><td>Manage users.</td></tr>
+        <tr><td><code>groupadd</code>, <code>groupmod</code></td><td>Manage groups.</td></tr>
+        <tr><td><code>iptables</code>, <code>firewalld</code></td><td>Configure firewall rules.</td></tr>
+        <tr><td><code>df -T</code></td><td>Shows file system types.</td></tr>
+        <tr><td><code>mount</code> and <code>umount</code></td><td>Attach and detach storage devices.</td></tr>
+      </tbody>
+    </table>
+    
+    <h2>Text Manipulation and Viewing</h2>
+        <table>
+      <thead>
+        <tr>
+          <th>Command</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>nano</code>, <code>vim</code>, <code>gedit</code></td><td>Text editors.</td></tr>
+        <tr><td><code>echo</code></td><td>Prints text to the terminal.</td></tr>
+        <tr><td><code>cat</code>, <code>less</code>, <code>more</code></td><td>View file content.</td></tr>
+        <tr><td><code>sed</code> and <code>awk</code></td><td>Process text.</td></tr>
+        <tr><td><code>tail -f</code></td><td>Monitors log files in real-time.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>System Information</h2>
+        <table>
+      <thead>
+        <tr>
+          <th>Command</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>hostname</code></td><td>Shows the system’s name.</td></tr>
+        <tr><td><code>whoami</code></td><td>Displays the current user.</td></tr>
+        <tr><td><code>env</code></td><td>Shows environment variables.</td></tr>
+        <tr><td><code>export</code></td><td>Sets environment variables.</td></tr>
+        <tr><td><code>history</code></td><td>Shows past commands.</td></tr>
+        <tr><td><code>alias</code></td><td>Creates command shortcuts.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Package Management</h2>
+    <p><code>apt</code>, <code>yum</code>, <code>dnf</code>, and <code>zypper</code> manage packages.</p>
+
+    <h2>Logs</h2>
+    <p>Logs are stored in <code>/var/log/</code>.</p>
+<hr>
+<h2>Basic Queries</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Command</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><code>SELECT</code></td><td>Retrieves data from tables.</td></tr>
+            <tr><td><code>WHERE</code></td><td>Filters records based on conditions.</td></tr>
+            <tr><td><code>ORDER BY</code></td><td>Sorts query results.</td></tr>
+            <tr><td><code>GROUP BY</code></td><td>Groups results based on columns.</td></tr>
+            <tr><td><code>HAVING</code></td><td>Filters grouped records.</td></tr>
+            <tr><td><code>DISTINCT</code></td><td>Removes duplicate values.</td></tr>
+            <tr><td><code>LIMIT</code></td><td>Restricts query results.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Data Manipulation</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Command</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><code>INSERT INTO</code></td><td>Adds new records.</td></tr>
+            <tr><td><code>UPDATE</code></td><td>Modifies existing records.</td></tr>
+            <tr><td><code>DELETE</code></td><td>Removes records.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Table Manipulation</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Command</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><code>ALTER TABLE</code></td><td>Modifies table structure.</td></tr>
+            <tr><td><code>DROP TABLE</code></td><td>Deletes a table.</td></tr>
+            <tr><td><code>TRUNCATE TABLE</code></td><td>Clears table data without logging.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Database Manipulation</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Command</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><code>CREATE DATABASE</code></td><td>Creates a new database.</td></tr>
+            <tr><td><code>DROP DATABASE</code></td><td>Removes a database.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Joins</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Command</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><code>JOIN</code></td><td>Combines data from multiple tables.</td></tr>
+            <tr><td><code>INNER JOIN</code></td><td>Returns only matching records.</td></tr>
+            <tr><td><code>LEFT JOIN</code></td><td>Returns all left table records with matches from the right table.</td></tr>
+            <tr><td><code>RIGHT JOIN</code></td><td>Returns all right table records with matches from the left table.</td></tr>
+            <tr><td><code>FULL JOIN</code></td><td>Returns all records from both tables.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Other Clauses and Operations</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Command/Clause</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><code>UNION</code></td><td>Merges results of multiple queries.</td></tr>
+            <tr><td><code>INDEX</code></td><td>Speeds up data retrieval.</td></tr>
+            <tr><td><code>PRIMARY KEY</code></td><td>Ensures unique, non-null values.</td></tr>
+            <tr><td><code>FOREIGN KEY</code></td><td>Links tables.</td></tr>
+            <tr><td><code>CHECK</code></td><td>Enforces column constraints.</td></tr>
+            <tr><td><code>DEFAULT</code></td><td>Sets default values.</td></tr>
+            <tr><td><code>NOT NULL</code></td><td>Ensures a column cannot be empty.</td></tr>
+            <tr><td><code>AUTO_INCREMENT</code></td><td>Automatically generates unique IDs.</td></tr>
+            <tr><td><code>VIEW</code></td><td>Stores a saved SQL query.</td></tr>
+            <tr><td><code>STORED PROCEDURE</code></td><td>Executes predefined SQL code.</td></tr>
+            <tr><td><code>TRIGGER</code></td><td>Automatically runs code on table events.</td></tr>
+            <tr><td><code>TRANSACTION</code></td><td>Ensures data consistency.</td></tr>
+            <tr><td><code>ROLLBACK</code></td><td>Undoes a transaction.</td></tr>
+            <tr><td><code>COMMIT</code></td><td>Saves a transaction.</td></tr>
+            <tr><td><code>CASE</code></td><td>Adds conditional logic.</td></tr>
+            <tr><td><code>EXISTS</code></td><td>Checks for subquery results.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Aggregate Functions</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Command</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><code>COUNT()</code></td><td>Counts rows.</td></tr>
+            <tr><td><code>AVG()</code></td><td>Calculates averages.</td></tr>
+            <tr><td><code>SUM()</code></td><td>Totals numeric values.</td></tr>
+            <tr><td><code>MAX()</code></td><td>Finds the highest value.</td></tr>
+            <tr><td><code>MIN()</code></td><td>Finds the lowest value.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Other Functions and Operators</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Command/Operator</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><code>LIKE</code></td><td>Searches for patterns.</td></tr>
+            <tr><td><code>IN</code></td><td>Matches multiple values.</td></tr>
+            <tr><td><code>BETWEEN</code></td><td>Selects a range.</td></tr>
+            <tr><td><code>COALESCE</code></td><td>Returns the first non-null value.</td></tr>
+            <tr><td><code>CROSS JOIN</code></td><td>Returns all combinations of two tables.</td></tr>
+            <tr><td><code>NOW()</code></td><td>Returns the current date and time.</td></tr>
+            <tr><td><code>LEFT()</code> and <code>RIGHT()</code></td><td>Extract substrings.</td></tr>
+        </tbody>
+    </table>
+<hr>
+<h2>Basics of C#</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Concept</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Overview</td><td>C# is a modern, object-oriented programming language developed by Microsoft, used for web, desktop, mobile, cloud, and game development.</td></tr>
+            <tr><td>Compilation</td><td>C# code is compiled into Intermediate Language (IL) and executed by the .NET runtime.</td></tr>
+            <tr><td>Typing</td><td>Strongly typed language: Variable types must be defined explicitly or inferred.</td></tr>
+            <tr><td>Memory Management</td><td>Supports automatic memory management via garbage collection.</td></tr>
+            <tr><td>Case Sensitivity</td><td>Case-sensitive: `myVariable` and `MyVariable` are different.</td></tr>
+            <tr><td>Statement Endings</td><td>Uses semi-colons (;) to end statements.</td></tr>
+            <tr><td>Namespaces</td><td>`using System;` imports standard namespaces.</td></tr>
+            <tr><td>Entry Point</td><td>Entry point of a C# program is the `Main()` method.</td></tr>
+            <tr><td>Latest Version</td><td>C# 12 is the latest version (as of 2025).</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Data Types & Variables</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Concept</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Primitive Types</td><td>`int`, `double`, `char`, `bool`, `float`, `decimal`</td></tr>
+            <tr><td>Type Inference</td><td>`var` allows type inference but remains strongly typed.</td></tr>
+            <tr><td>Constants</td><td>Constants are declared with `const` or `readonly`.</td></tr>
+            <tr><td>Nullable Types</td><td>Nullable types (e.g., `int? x = null;`) allow variables to store `null`.</td></tr>
+            <tr><td>Strings</td><td>Strings are immutable in C#.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Control Flow & Loops</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Concept</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Conditional Statements</td><td>`if`, `else`, `switch`</td></tr>
+            <tr><td>Loops</td><td>`for`, `while`, `do-while`, and `foreach`</td></tr>
+            <tr><td>Loop Control</td><td>`break` exits a loop, `continue` skips to the next iteration.</td></tr>
+            <tr><td>Switch Expressions</td><td>Simplify multiple conditional cases.</td></tr>
+            <tr><td>Pattern Matching</td><td>Enhances `switch` with type-based conditions.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Object-Oriented Programming (OOP)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Concept</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Classes & Objects</td><td>Classes are the blueprint for objects. Objects are instances of classes.</td></tr>
+            <tr><td>Encapsulation</td><td>Uses access modifiers (`private`, `public`, `protected`).</td></tr>
+            <tr><td>Inheritance</td><td>A class can derive from another (e.g., `class B : A`).</td></tr>
+            <tr><td>Polymorphism</td><td>Methods can be overridden in derived classes.</td></tr>
+            <tr><td>Abstraction</td><td>Hides implementation details using abstract classes and interfaces.</td></tr>
+            <tr><td>Interfaces</td><td>`interface IExample` defines method signatures without implementation.</td></tr>
+            <tr><td>Sealed Classes</td><td>`sealed class A {}` cannot be inherited.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Exception Handling</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Concept</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Mechanism</td><td>Handled using `try-catch-finally`.</td></tr>
+            <tr><td>Throwing Exceptions</td><td>`throw` is used to raise exceptions.</td></tr>
+            <tr><td>Catching Exceptions</td><td>`catch (Exception ex)` handles exceptions.</td></tr>
+            <tr><td>Finally Block</td><td>`finally` block executes regardless of exception occurrence.</td></tr>
+            <tr><td>Custom Exceptions</td><td>Custom exceptions are created by inheriting from `Exception`.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Collections & LINQ</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Concept</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Arrays</td><td>`int[] numbers = {1, 2, 3};`</td></tr>
+            <tr><td>Lists</td><td>`List<int> numbers = new List<int>();`</td></tr>
+            <tr><td>Dictionaries</td><td>`Dictionary<string, int> myDict = new Dictionary<string, int>();`</td></tr>
+            <tr><td>LINQ</td><td>Language-Integrated Query allows querying collections (e.g., `.Where()`, `.Select()`).</td></tr>
+            <tr><td>HashSet</td><td>Prevents duplicate values.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Asynchronous Programming</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Concept</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Async/Await</td><td>Improves performance by avoiding thread blocking.</td></tr>
+            <tr><td>Task</td><td>Represents an asynchronous operation.</td></tr>
+            <tr><td>Async Method</td><td>`async Task MethodName()` executes non-blocking code.</td></tr>
+            <tr><td>Await</td><td>`await` waits for a task to complete before proceeding.</td></tr>
+            <tr><td>Task.Run()</td><td>Executes background operations.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>File Handling & I/O</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Concept</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Reading Files</td><td>`File.ReadAllText()` reads a file into a string.</td></tr>
+            <tr><td>Writing Files</td><td>`File.WriteAllText()` writes text to a file.</td></tr>
+            <tr><td>Streaming</td><td>`StreamReader` and `StreamWriter` handle file streaming.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Modern Features & Performance</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Concept</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Records</td><td>`record class Person(string Name, int Age);` simplify data models.</td></tr>
+            <tr><td>Span and Memory</td><td>`Span<T>` and `Memory<T>` improve performance for memory-sensitive operations.</td></tr>
+            <tr><td>Top-level Statements</td><td>Remove boilerplate in simple programs.</td></tr>
+            <tr><td>Use Cases</td><td>C# is widely used in ASP.NET Core, Unity (game development), and Azure development.</td></tr>
+        </tbody>
+    </table>
+
+
+</body>
+</html>
